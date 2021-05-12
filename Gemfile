@@ -63,4 +63,3 @@ end
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'font-awesome-rails'
 gem 'bootstrap', '~> 4.0.0'
-gem 'jquery-rails'
