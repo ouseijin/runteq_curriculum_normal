@@ -1,0 +1,5 @@
+ja:
+  user_sessions:  # <= app/views/user_sessions と　user_sessions_controllerを指します
+    new:  # <=  一階層下のnew.html.erb と user_sessions#newを指します。
+      email: "メールアドレス"
+      password: "パスワード"

@@ -1,0 +1,11 @@
+ja:
+  activerecord:  #<= active_recordを使用することを宣言
+    models:
+      user: "ユーザー"
+    attributes:
+      user:
+        last_name: "姓"
+        first_name: "名"
+        email: "メールアドレス"
+        password: "パスワード"
+        password_confirmation: "パスワード確認用"
