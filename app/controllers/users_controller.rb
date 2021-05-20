@@ -9,7 +9,7 @@ class UsersController < ApplicationController
       flash[:success] = 'ユーザー登録が完了しました.'
       redirect_to login_url
     else
-      flash[:danger] = 'ユーザー登録に失敗しました。'
+      flash.now[:danger] = 'ユーザー登録に失敗しました。'
       render :new
     end
   end
