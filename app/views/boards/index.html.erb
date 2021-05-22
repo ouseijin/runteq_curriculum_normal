@@ -13,7 +13,7 @@
   <div class="row">
     <div class="col-12">
       <div class="row">
-        <% if logged_in?&&@boards.present? %>
+        <% if @boards.present? %>
           <%= render partial: "board", collection: @boards  %>
         <% else %>
           <p><%= '掲示板がありません。' %></p>
