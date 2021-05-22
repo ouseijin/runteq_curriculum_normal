@@ -4,12 +4,10 @@ class BoardsController < ApplicationController
     @boards = current_user.boards.all.includes(:user)
   end
 
-  private
+private
   def login_required
-    unless current_user
-      flash[:danger] = 'ログインしてください' 
-      redirect_to login_url 
-    end
+    return if current_user
+      flash[:danger] = 'ログインしてください'
+      redirect_to login_url
   end
-
 end
