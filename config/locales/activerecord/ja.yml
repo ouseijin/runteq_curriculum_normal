@@ -9,3 +9,7 @@ ja:
         email: "メールアドレス"
         password: "パスワード"
         password_confirmation: "パスワード確認用"
+  time:
+    formats:
+      default:
+      long: "%Y/%m/%d %H:%M"
