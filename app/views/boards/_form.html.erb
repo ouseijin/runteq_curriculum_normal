@@ -1,0 +1,20 @@
+<%= form_with model: @board, local: true do |f| %> 
+    <% if @board.errors.any? %>
+        <div id="error_explanation">
+        <ul>
+            <% @board.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+            <% end %>
+        </ul>
+        </div>
+    <% end %>   
+    <div class="form-group">
+      <%= f.label :title %>
+      <%= f.text_field :title, class: 'form-control', id: 'board_title' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :body %>
+      <%= f.text_area :body, rows: 10, class: 'form-control', id: 'board_body' %>
+    </div>
+    <%= f.submit '登録する', class: 'btn btn-primary' %>
+<% end %>
