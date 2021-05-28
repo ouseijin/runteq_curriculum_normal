@@ -1,13 +1,5 @@
 <%= form_with model: @board, local: true do |f| %> 
-    <% if @board.errors.any? %>
-        <div id="error_explanation">
-        <ul>
-            <% @board.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-            <% end %>
-        </ul>
-        </div>
-    <% end %>   
+    <%= render 'shared/error_messages', object: f.object %> 
     <div class="form-group">
       <%= f.label :title %>
       <%= f.text_field :title, class: 'form-control', id: 'board_title' %>
@@ -15,6 +7,10 @@
     <div class="form-group">
       <%= f.label :body %>
       <%= f.text_area :body, rows: 10, class: 'form-control', id: 'board_body' %>
+    </div>
+    <div class="form-group">
+        <%= f.label :board_image %>
+        <%= f.file_field :board_image, class: 'form-control mb-3', accept: 'image/jpg,image/jpeg,image/png,image/gif' %>
     </div>
     <%= f.submit '登録する', class: 'btn btn-primary' %>
 <% end %>
