@@ -4,10 +4,10 @@ class CommentsController < ApplicationController
     @comment.board_id = params[:board_id]
     if @comment.save
       flash[:success] = 'コメントを作成しました'
-      redirect_to board_path(params[:board_id])
+      redirect_to board_path(@comment.board.id)
     else
       flash[:danger] = 'コメントを作成できませんでした'
-      redirect_to board_path(params[:board_id])
+      redirect_to board_path(@comment.board.id)
     end
   end
 
@@ -15,5 +15,5 @@ class CommentsController < ApplicationController
 
   def comment_params
     params.require(:comment).permit(:body)
-  end  
+  end
 end
