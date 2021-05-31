@@ -4,11 +4,10 @@ class CommentsController < ApplicationController
     @comment.board_id = params[:board_id]
     if @comment.save
       flash[:success] = 'コメントを作成しました'
-      redirect_to board_path(@comment.board_id)
     else
       flash[:danger] = 'コメントを作成できませんでした'
-      redirect_to board_path(@comment.board_id)
     end
+    redirect_to board_path(@comment.board.id)
   end
 
   private
