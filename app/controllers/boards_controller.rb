@@ -8,7 +8,7 @@ class BoardsController < ApplicationController
   end
 
   def create
-    @board = current_user.boards.new(board_params)
+    @board = current_user.boards.build(board_params)
     if @board.save
       flash[:success] = '掲示板を作成しました'
       redirect_to boards_path
@@ -18,9 +18,15 @@ class BoardsController < ApplicationController
     end
   end
 
+  def show
+    @board = Board.find(params[:id])
+    @comment = current_user.comments.new
+    @comments = @board.comments.includes(:user).order(created_at: :desc)
+  end
+
   private
 
   def board_params
-    params.require(:board).permit(:title, :body)
+    params.require(:board).permit(:title, :body, :board_image, :board_image_cache)
   end
 end
