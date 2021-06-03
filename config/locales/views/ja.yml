@@ -1,5 +1,33 @@
 ja:
+  defaults:
+    login: 'ログイン'
+    register: '登録'
+    logout: 'ログアウト'
+    message:
+      updated: "%{item}を更新しました"
+      not_updated: "%{item}を更新できませんでした"
+      deleted: "%{item}を削除しました"
+      delete_confirm: "掲示板を削除してもよろしいですか？"
+  users:
+    new:
+      title: 'ユーザー登録'
+      to_login_page: 'ログインページへ'
   user_sessions:  # <= app/views/user_sessions と　user_sessions_controllerを指します
     new:  # <=  一階層下のnew.html.erb と user_sessions#newを指します。
       email: "メールアドレス"
       password: "パスワード"
+      title: 'ログイン'
+      to_register_page: '登録ページへ'
+      password_forget: 'パスワードをお忘れの方はこちら'
+  boards:
+    index:
+      title: '掲示板一覧'
+    new:
+      title: '掲示板作成'
+    edit:
+      title: '掲示板編集'
+    bookmarks:
+      title: 'ブックマーク一覧'
+  profiles:
+    show:
+      title: 'プロフィール'
