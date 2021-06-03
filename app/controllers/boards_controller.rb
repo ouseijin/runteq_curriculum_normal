@@ -29,7 +29,7 @@ class BoardsController < ApplicationController
   def edit; end
 
   def update
-    if @board.update!(board_params)
+    if @board.update(board_params)
       redirect_to @board, success: t('defaults.message.updated', item: Board.model_name.human)
     else
       flash.now[:danger] = t('defaults.message.not_updated', item: Board.model_name.human)
@@ -41,7 +41,7 @@ class BoardsController < ApplicationController
     @board.destroy!
     redirect_to boards_path, success: t('defaults.message.deleted', item: Board.model_name.human)
   end
-  
+
   private
 
   def set_board
