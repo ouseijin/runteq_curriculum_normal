@@ -1,10 +1,10 @@
 <% if current_user.own?(board) %>
   <ul class='crud-menu-btn list-inline float-right'>
     <li class="list-inline-item">
-      <%= link_to edit_board_path(board), id: 'button-edit-#{board.id}' do %>
+      <%= link_to edit_board_path(board), id: "button-edit-#{board.id}" do %>
       <%= icon 'fa', 'pen' %>
       <% end %>
-      <%= link_to board_path(board), id: 'button-delete-#{board.id}', method: :delete, data: {confirm: t('defaults.message.delete_confirm')} do %>
+      <%= link_to board_path(board), id: "button-delete-#{board.id}", method: :delete, data: {confirm: t('defaults.message.delete_confirm')} do %>
       <%= icon 'fas', 'trash' %>
       <% end %>
     </li>
