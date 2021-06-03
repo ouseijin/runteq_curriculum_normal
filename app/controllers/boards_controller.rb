@@ -25,6 +25,7 @@ class BoardsController < ApplicationController
     @comment = Comment.new
     @comments = @board.comments.includes(:user).order(created_at: :desc)
   end
+
   def edit; end
 
   def update
