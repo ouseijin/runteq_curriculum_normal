@@ -21,7 +21,7 @@ class User < ApplicationRecord
   end
 
   def unbookmark(board)
-    bookmarks_boards.delete(board)
+    bookmarks_boards.destroy(board)
   end
 
   def bookmark?(board)
