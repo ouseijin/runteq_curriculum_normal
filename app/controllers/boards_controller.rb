@@ -2,8 +2,8 @@ class BoardsController < ApplicationController
   before_action :set_board, only: %i[edit update destroy]
 
   def index
-    @search = Board.ransack(params[:q])
-    @boards = @search.result(distinct: true).includes(%i[user bookmarks]).order(created_at: :desc).page(params[:page])
+    @q = Board.ransack(params[:q])
+    @boards = @q.result(distinct: true).includes(%i[user bookmarks]).order(created_at: :desc).page(params[:page])
   end
 
   def new
@@ -44,8 +44,8 @@ class BoardsController < ApplicationController
   end
 
   def bookmarks
-    @search = current_user.bookmark_boards.ransack(params[:q])
-    @bookmark_boards = @search.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page])
+    @q = current_user.bookmark_boards.ransack(params[:q])
+    @bookmark_boards = @q.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page])
   end
 
   private
