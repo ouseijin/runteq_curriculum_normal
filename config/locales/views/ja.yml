@@ -37,5 +37,8 @@ ja:
     edit:
       title: 'プロフィール編集'
   password_resets:
+    new:
+      title: 'パスワードリセット申請'
+      email: 'メールアドレス'
     create:
       success: 'パスワードリセット手順を送信しました'
