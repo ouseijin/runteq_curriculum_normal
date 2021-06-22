@@ -42,3 +42,5 @@ ja:
       email: 'メールアドレス'
     create:
       success: 'パスワードリセット手順を送信しました'
+    edit:
+      title: 'パスワードリセット'

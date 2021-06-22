@@ -1,3 +1,5 @@
+<% content_for(:title, t('.title')) %>
+<h1>パスワードリセット</h1>
 <%= form_with model: @user, url: password_reset_path(@token), local: true do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
         
@@ -10,5 +12,5 @@
     <%= f.label :password_confirmation %><br>
     <%= f.password_field :password_confirmation %>
         
-    <%= f.submit '更新' %>
+    <%= f.submit '更新する' %>
 <% end %>

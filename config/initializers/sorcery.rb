@@ -243,9 +243,7 @@ Rails.application.config.sorcery.configure do |config|
   # --- user config ---
   config.user_config do |user|
     user.reset_password_mailer = UserMailer
-    
     user.stretches = 1 if Rails.env.test?
-
   end
 
   # This line must come after the 'user config' block.
