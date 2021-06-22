@@ -4,6 +4,7 @@ ja:
     register: '登録'
     logout: 'ログアウト'
     search_word: '検索ワード'
+    edit: '編集'
     update: '更新する'
     message:
       updated: "%{item}を更新しました"
@@ -35,3 +36,6 @@ ja:
       title: 'プロフィール'
     edit:
       title: 'プロフィール編集'
+  password_resets:
+    create:
+      success: 'パスワードリセット手順を送信しました'

@@ -14,7 +14,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
   end
 
   def default_url
-    'board_placeholder.png'
+    'sample.jpg'
   end
 
   def extension_whitelist
