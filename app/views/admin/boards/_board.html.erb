@@ -4,13 +4,13 @@
       <th scope="col">ID</th>
       <th scope="col">タイトル</th>
       <th scope="col">作成者</th>
-      <th scope="col">作成日時</th>
+      <th scope="col">作成日</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td scope="row"><%= board.id %></td>
-      <td><%= board.title %></td>
+      <td><%= link_to board.title, admin_board_path(board) %></td>
       <td><%= board.user.decorate.full_name %></td>
       <td><%= l board.created_at,format: :long %></td>
       <td><%= link_to '詳細', admin_board_path(board), class: 'btn btn-info' %></td>

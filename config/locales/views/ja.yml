@@ -64,6 +64,10 @@ ja:
     boards:
       index:
         title: '掲示板一覧'
+      show:
+        title: '掲示板詳細'
+      edit:
+        title: '掲示板編集'
     users:
       index:
         title: 'ユーザー一覧'
