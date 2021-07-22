@@ -22,3 +22,8 @@ ja:
     formats:
       default:
       long: "%Y/%m/%d %H:%M"
+  enums:
+    user:
+      role:
+        general: '一般'
+        admin: '管理者'
