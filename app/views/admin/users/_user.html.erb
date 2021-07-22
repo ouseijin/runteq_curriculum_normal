@@ -10,7 +10,7 @@
   <tbody>
     <tr>
       <td scope="row"><%= user.id %></td>
-      <td><%= user.decorate.full_name %></td>
+      <td><%= link_to user.decorate.full_name, admin_user_path(user) %></td>
       <td><%= user.role_i18n %></td>
       <td><%= l user.created_at,format: :long %></td>
       <td><%= link_to '詳細', admin_user_path(user), class: 'btn btn-info' %></td>
