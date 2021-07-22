@@ -6,6 +6,7 @@ ja:
     search_word: '検索ワード'
     edit: '編集'
     update: '更新する'
+    unspecified: '指定なし'
     message:
       updated: "%{item}を更新しました"
       not_updated: "%{item}を更新できませんでした"
