@@ -4,8 +4,10 @@ ja:
     register: '登録'
     logout: 'ログアウト'
     search_word: '検索ワード'
+    show: '詳細'
     edit: '編集'
     update: '更新する'
+    delete: '削除'
     unspecified: '指定なし'
     message:
       updated: "%{item}を更新しました"

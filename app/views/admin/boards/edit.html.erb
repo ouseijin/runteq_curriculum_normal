@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-lg-8 offset-lg-2">
       <h1><%= t('.title') %></h1>
-      <%= form_with model: @board, url: admin_board_path, method: :put, local: true do |f| %> 
+      <%= form_with model: @board, url: admin_board_path(@board), local: true do |f| %> 
         <%= render 'shared/error_messages', object: f.object %> 
         <div class="form-group">
           <%= f.label :title %>
